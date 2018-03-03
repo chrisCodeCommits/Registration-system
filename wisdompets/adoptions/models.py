@@ -1,17 +1,18 @@
 from django.db import models
 
-class Pet(models.model):
+class Pet(models.Model):
     
     SEX_CHOICE = [('M','Male'),('F','Female')]
+    name = models.CharField(max_length=100)
+    submitter = models.CharField(max_length=100)
+    species = models.CharField(max_length=30)
+    breed = models.CharField(max_length=30)
+    description = models.TextField()
+    sex = models.CharField(choices=SEX_CHOICE, max_length=1)
+    submission_date = models.DateTimeField()
+    age = models.IntegerField(null=True)
+    vaccinations = models.ManyToManyField('vaccine', blank=True)
 
-    name = models.chartField(max_lengh=100)
+class Vaccine(models.Model):
+    name = models.CharField(max_length=50)
 
-    submitter = models.chartField(max_lengh=100)
-
-    species = models.chartField(max_lengh=30)
-
-    breed = models.chartField(max_lengh=30)
-
-    description = models.chartField()
-    
-    sex = models.chartField(choice=SEX_CHOICE, max_lengh=1)
