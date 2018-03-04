@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+
 <div>
     {% for pet in pets %}
         <div class="petname">
@@ -19,3 +22,5 @@
         </div>
     {% endfor %}
 </div>
+
+{% endblock %}
