@@ -28,4 +28,8 @@ creating a brand-new Django project, defining a data model and fields, querying 
 
 ---
 
+![](img_md/index_page.png)
+
+---
+
 ### Thank you 
